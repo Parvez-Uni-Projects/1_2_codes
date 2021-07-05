@@ -1,8 +1,7 @@
-
 public class AccountDemo {
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args){
         
         Account a1= new Account(1001, 5000.0, "debit");
         
@@ -16,21 +15,3 @@ public class AccountDemo {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-/*public class App {
-    public static void main(String[] args){
-        System.out.println("Hello, World!");
-        Demo myFrame =new Demo();
-        myFrame.init();
-    }
-} */
