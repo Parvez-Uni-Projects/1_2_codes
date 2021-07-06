@@ -1,0 +1,7 @@
+data type is primitive it is a must to learn programming there are multiple ty[es of data types 
+
+short 
+int it takes 32 bits of space 
+
+
+there are multiple rule for naming a variable
