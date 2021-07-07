@@ -10,10 +10,10 @@ public class Account {
         transactionType= null;
     }
     
-    Account(int id, double balan, String tran){  //another constructor which will assign the variables
-        accountID=id;
-        balance= balan;
-        transactionType= tran;
+    Account(int accountID, double balance, String transactionType){  //another constructor which will assign the variables
+        this.accountID=accountID;
+        this.balance= balance;
+        this.transactionType= transactionType;
     }
     
     public double changeBalance(double x){    //creating public method for debit and credit
