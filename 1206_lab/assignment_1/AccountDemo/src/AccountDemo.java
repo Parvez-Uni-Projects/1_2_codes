@@ -1,7 +1,7 @@
 public class AccountDemo {
 
     
-    public static void main(String[] args){        //this has the main method
+    public static void main(String[] args)throws Exception{        //this has the main method
         
         Account a1= new Account(1001, 5000.0, "debit");  //inputting a demo data for test purpose
         
