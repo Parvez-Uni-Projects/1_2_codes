@@ -5,9 +5,9 @@ public class Account {
     public String transactionType;
     
     Account(){  //initializing the variables in this constructor
-        accountID=0;
-        balance= -1.0;
-        transactionType= null;
+        this.accountID=0;
+        this.balance= -1.0;
+        this.transactionType= null;
     }
     
     Account(int accountID, double balance, String transactionType){  //another constructor which will assign the variables
@@ -17,11 +17,11 @@ public class Account {
     }
     
     public double changeBalance(double x){    //creating public method for debit and credit
-        double blnc = 0;
-        if("debit"==(transactionType))
-            blnc= balance-x;
-        else if("credit"==(transactionType))
-            blnc= balance+x;
-        return blnc;
+        
+        if(this.transactionType.equals("debit"))
+            return balance-x;
+        else if(this.transactionType.equals("credit"))
+            return balance+x;
+        
     }
 }
