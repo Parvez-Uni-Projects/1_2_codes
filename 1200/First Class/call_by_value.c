@@ -10,7 +10,7 @@ void main()
     printf("After using swapping by value     a= %d\tb= %d\n",a,b); //here we can see no change of value 
     //printf("%d \t %d\n", a, b);
 
-    swap_ref(&a,&b); 
+    swap_ref(&a,&b); //here i am sending the addresses of the variables and in the udf i am changing the values stored in the memories as a result it is getting altered in real time and the change is permanent.
 
     printf("After using swapping by reference a= %d\tb= %d\n",a,b); //here we can see no change of value 
     //printf("%d \t %d\n", a, b);
