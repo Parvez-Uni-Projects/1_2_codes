@@ -7,7 +7,8 @@ int main()
     printf("Address of the variable = %d\n", &val); 
 
     /* Pointer declaration */ 
-    int *ptr; ptr = &val; 
+    int *ptr; 
+    ptr = &val; 
     /* Dereference operator = "*" ( unary )*/ 
     printf("Value of the pointer = %d\n", *ptr); 
     printf ("Address of the pointer = %d\n", ptr); 
