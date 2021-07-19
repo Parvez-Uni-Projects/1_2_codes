@@ -3,37 +3,35 @@ public class HROfficer {
     public Developer devObj;
     
     public void devObj (HROfficer Developer){
+    
 
     }
+    public int gettotalProjects() {
+        return 0;
+    }
 
-    public double checkPerformance(){
+    public int gettotalMonths() {
+        return 0;
+    }
+
+
+    String  checkPerformance(Developer devObj){
         
-        
+        int finalPerformance = devObj.gettotalProjects() * devObj.gettotalMonths() +100 ;
 
-        int sumPerform = gettotalcProject() * gettotalMonths() +100 ;
-
-        int length = String.valueOf(sumPerform).length();
-
-        double sum=0;
+        int length = String.valueOf(finalPerformance).length();
         int i;
-        int digit;
+        int sum=0;
 
-        for( i=0 ;i<length;i++ )
-        { 
-            digit= sumPerform%10;
-            sumPerform /=10 ;
-            sum+= Math.pow(digit, 3);     
-            
+        for(i=0 ;i<length ;i++)
+        {
+            sum+=Math.pow(finalPerformance%10,3);
+            finalPerformance/=10;
         }
 
-            return sum;
-    }
-
-    private int gettotalcProject() {
-        return 0;
-    }
-
-    private int gettotalMonths() {
-        return 0;
+        if (sum%2 == 0 ) return "Developer's performance is bad ";
+        else if (sum%2 != 0 ) return ("Developer's performance is Good ");
+        return null;   
     }
 }
+    

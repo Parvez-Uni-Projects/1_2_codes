@@ -12,10 +12,11 @@ public class TestEmployee {
         int totalMonths=scanner.nextInt();
 
         Developer dev1 =new Developer(totalProjects,totalMonths);
+        HROfficer obj2 =new HROfficer();
 
-         String   perform =dev1.checkPerformance();
 
-       
+         String perform = obj2.checkPerformance(dev1); 
+
         System.out.println ("Total Project is: " + dev1.gettotalProjects());
         System.out.println ("Total Month is: " + dev1.gettotalMonths()); 
         
