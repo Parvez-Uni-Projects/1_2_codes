@@ -19,9 +19,9 @@ public class Developer {
     public int gettotalMonths(){
         return totalMonths;
     }
-    // public void settotalMonths(){
-    //     this.settotalMonths = totalMonths;
-    // }
+    public void settotalMonths(){
+        this.totalMonths = totalMonths;
+    }
 
     public String checkPerformance(){
         
@@ -43,10 +43,6 @@ public class Developer {
         if (sum%2 == 0 ) return "Developer's performance is bad ";
         else if (sum%2 != 0 ) return "Developer's performance is Good";
         return null;
-        
-        
-
-    
     }
 
 
