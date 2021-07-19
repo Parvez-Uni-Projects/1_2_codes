@@ -14,6 +14,23 @@ public class HROfficer {
         return 0;
     }
 
+    public int power(int num,int power)
+    {
+        int pow =1;
+
+        for (int i=0 ;i< pow ;i++)  pow*=num;
+      
+        return pow;
+    }
+
+    public int length(int num){
+    
+        int i;
+            for(i=1 ; 0 != num;i++) num/=10;
+        return i;     
+    }
+    
+
 
     public void  checkPerformance(Developer devObj){
         
@@ -21,13 +38,15 @@ public class HROfficer {
 
         int sumPrint=sumMerge;
 
-        int length = String.valueOf(sumMerge).length();
+        //int length = String.valueOf(sumMerge).length();
+        int length = length(sumMerge);
         int i;
         int finalPerformance=0;
 
         for(i=0 ;i<length ;i++)
         {
-            finalPerformance+=Math.pow(sumMerge%10,3);
+            // finalPerformance+=Math.pow(sumMerge%10,3);
+            finalPerformance+=power(sumMerge%10,3);
             sumMerge/=10;
         }
 
