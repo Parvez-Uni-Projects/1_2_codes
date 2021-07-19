@@ -22,6 +22,5 @@ public class Developer {
     public void settotalMonths(){
         this.totalMonths = totalMonths;
     }
-
-    
+   
 }

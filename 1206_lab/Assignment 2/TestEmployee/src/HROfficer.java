@@ -15,23 +15,28 @@ public class HROfficer {
     }
 
 
-    String  checkPerformance(Developer devObj){
+    public void  checkPerformance(Developer devObj){
         
-        int finalPerformance = devObj.gettotalProjects() * devObj.gettotalMonths() +100 ;
+        int sumMerge = devObj.gettotalProjects() * devObj.gettotalMonths() +100 ;
 
-        int length = String.valueOf(finalPerformance).length();
+        int sumPrint=sumMerge;
+
+        int length = String.valueOf(sumMerge).length();
         int i;
-        int sum=0;
+        int finalPerformance=0;
 
         for(i=0 ;i<length ;i++)
         {
-            sum+=Math.pow(finalPerformance%10,3);
-            finalPerformance/=10;
+            finalPerformance+=Math.pow(sumMerge%10,3);
+            sumMerge/=10;
         }
 
-        if (sum%2 == 0 ) return "Developer's performance is bad ";
-        else if (sum%2 != 0 ) return ("Developer's performance is Good ");
-        return null;   
+        System.out.println("Performance result is : " + sumPrint );
+
+        if (finalPerformance%2 == 0 ){
+            System.out.println ("Developer's performance is bad ");
+        }
+        else if (finalPerformance%2 != 0 ) System.out.println ("Developer's performance is Good "); 
     }
 }
     
