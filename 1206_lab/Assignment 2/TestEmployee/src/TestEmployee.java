@@ -13,8 +13,12 @@ public class TestEmployee {
 
         Developer dev1 =new Developer(totalProjects,totalMonths);
 
+         String   perform =dev1.checkPerformance();
+
        
         System.out.println ("Total Project is: " + dev1.gettotalProjects());
-        System.out.println ("Total Month is: " + dev1.gettotalMonths());  
+        System.out.println ("Total Month is: " + dev1.gettotalMonths()); 
+        
+        System.out.println ("Final Performance is: " + perform);
     }
 }

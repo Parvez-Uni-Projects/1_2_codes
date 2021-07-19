@@ -1,0 +1,4 @@
+1. Write a Java program that finds the 4th smallest number from an array with size >= 4.
+For example, if the input array is initialized to 10, 7, 6, 3, 4 the output should be 7
+
+Hint: you just need to print the value. You can use the value given here as input and print 7 since that is the 4th smallest in this list.

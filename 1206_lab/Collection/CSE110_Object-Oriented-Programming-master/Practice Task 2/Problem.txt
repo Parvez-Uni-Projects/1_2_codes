@@ -1,0 +1,131 @@
+Problem Description
+You will need to write two files: Point.java and Quadrilateral.java.
+A simple driver class TestQuadrilateral.java has been provided, and it will allow you to interact
+with your simulation. Specific instructions for each file are given in later sections.
+Solution Description
+Point.java
+Your Point.java should have the following fields, methods and constructors
+ private double x, y: These fields are the name of the dimensions of a 2d point
+ public Point(double x, double y): This is the constructor of Point class and it
+takes the dimensions as its parameters
+ public double distance(Point p): This method returns the distance between itself
+and a point p, passed as a parameter
+ public String toString(): This method returns the dimensions of the point
+Quadrilateral.java
+Your Quadrilateral.java should have the following fields, methods and constructors
+ private Point p1, p2, p3, p4: These fields are the names of the four points of a
+quadrilateral and they should be initialized in the constructor. The points passed as arguments
+will be in counter-clockwise order
+ public Quadrilateral(double x1, double y1, double x2, double y2,
+double x3, double y3, double x4, double y4): This is the constructor of the class
+and it takes the dimension of the four points as its parameter
+ public Quadrilateral(Point p1, Point p2, Point p3, Point p4): This is
+another constructor of the class and it takes four points as its parameter
+ public boolean isRectangle(): This method returns true if the quadrilateral is a
+rectangle or false otherwise
+ public boolean isSquare(): This method returns true if the quadrilateral is a square or
+false otherwise
+ public boolean isRhombus(): This method returns true if the quadrilateral is a rhombus
+or false otherwise
+ public boolean isParallelogram(): This method returns true if the quadrilateral is a
+parallelogram or false otherwise
+ public boolean isOrdinary(): This method returns true if the quadrilateral is not any
+of the followings: rectangle, square, rhombus, parallelogram or returns false otherwise.
+ public String toString(): This method returns the dimension of the 4 points
+
+Running and Testing
+TestQuadrilateral.java
+TestQuadrilateral.java has been provided for you. It creates several instances of quadrilateral,
+and allows the user to interact with them. You can run the main method to start a simulation, and
+test from there.
+Quadrilateral q1, q2, q3, q4, q5, q6, q7;
+q1 = new Quadrilateral(10, 20, 40, 20, 40, 40, 10, 40);
+q2 = new Quadrilateral(20, 30, 40, 30, 40, 50, 20, 50);
+Point p1 = new Point(50, 30);
+Point p2 = new Point(150, 30);
+Point p3 = new Point(100, 60);
+Point p4 = new Point(60, 70);
+q3 = new Quadrilateral(p1, p2, p3, p4);
+q4 = new Quadrilateral(6, 7, 36, 7, 48, 26, 18, 26);
+q5 = new Quadrilateral(2, -4, 9, -3, 4, 2, -3, 1);
+q6 = new Quadrilateral(1, -2, 4, 1, 1, 4, -2, 1);
+q7 = new Quadrilateral(39, 2, 47, 16, 16, 34, 8, 20);
+System.out.println(q1.isSquare());
+System.out.println(q1.isRectangle());
+System.out.println(q1.isRhombus());
+System.out.println(q1.isParallelogram());
+System.out.println(q1.isOrdinary());
+System.out.println();
+System.out.println(q2.isSquare());
+System.out.println(q2.isRectangle());
+System.out.println(q2.isRhombus());
+System.out.println(q2.isParallelogram());
+System.out.println(q2.isOrdinary());
+System.out.println();
+System.out.println(q3.isSquare());
+System.out.println(q3.isRectangle());
+System.out.println(q3.isRhombus());
+System.out.println(q3.isParallelogram());
+System.out.println(q3.isOrdinary());
+System.out.println();
+System.out.println(q4.isSquare());
+System.out.println(q4.isRectangle());
+System.out.println(q4.isRhombus());
+System.out.println(q4.isParallelogram());
+System.out.println(q4.isOrdinary());
+System.out.println();
+System.out.println(q5.isSquare());
+System.out.println(q5.isRectangle());
+System.out.println(q5.isRhombus());
+System.out.println(q5.isParallelogram());
+System.out.println(q5.isOrdinary());
+
+System.out.println();
+System.out.println(q6.isSquare());
+System.out.println(q6.isRectangle());
+System.out.println(q6.isRhombus());
+System.out.println(q6.isParallelogram());
+System.out.println(q6.isOrdinary());
+System.out.println();
+System.out.println(q7.isSquare());
+System.out.println(q7.isRectangle());
+System.out.println(q7.isRhombus());
+System.out.println(q7.isParallelogram());
+System.out.println(q7.isOrdinary());
+Output
+false
+true
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+false
+true
+false
+false
+false
+true
+false
+
+false
+true
+false
+false
+false
+false
+false
+false
+false
+true
+false

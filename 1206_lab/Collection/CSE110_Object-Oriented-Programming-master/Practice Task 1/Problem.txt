@@ -1,0 +1,66 @@
+Write a class named Point which has the following instance variables:
+x (double)
+y (double)
+Then create appropriate constructors, getter & setter methods, toString method so that the following TestPoint.java class works smoothly and gives the following output.
+
+TestPoint.java
+public class TestPoint {
+   public static void main(String[] args) {
+       Point p1 = new Point();
+       System.out.println(p1);
+       System.out.println(p1.getQuadrantNumber());
+
+       Point p2 = new Point(100, 100);
+       System.out.println(p2);
+       System.out.println(p2.getQuadrantNumber());
+      
+       Point p3 = new Point(-100, 100);
+       System.out.println(p3);
+       System.out.println(p3.getQuadrantNumber());
+
+       Point p4 = new Point(100, -100);
+       System.out.println(p4);
+       System.out.println(p4.getQuadrantNumber());
+
+   }
+}
+
+Output:
+Point: x = -400, y = -400
+4
+Point: x = 100, y = 100
+2       
+Point: x = -100, y = 100
+3       
+Point: x = 100, y = -100
+1
+
+
+
+
+
+
+Task 2: (50 minutes)
+Write a class named Rectangle which has the following instance variables.
+listOfPoints: an 1d array of Points
+
+Complete the following methods of class Rectangle.
+Rectangle()
+Rectangle (Point p1, Point p2, Pont p3, Point p4)
+Rectangle (Point[] p)
+toString(): This should return the xs’ and ys’ of the 4 points of a rectangle, e.g.
+Rectangle: P1: (10, 10), P2: (10, 30), P3: (0, 10), P4: (0, 30)
+
+Write a tester class named TestRectangle and do the following.
+Create a Rectangle r1 with the no-arg constructor
+Invoke toString method for Rectangle r1
+
+
+Create 4 points named p1(10, 10), p2(10, 30), p3(0, 10), p4(0, 30)
+Create a Rectangle r2 with the 4 points that you have just created: p1, p2, p3 and p4
+Invoke toString method for Rectangle r2
+
+
+Create an array of Points named pArray of size 4 and populate with p1, p2, p3 and p4
+Create a Rectangle r3 with the array pArray.
+Invoke toString method for Rectangle r3
