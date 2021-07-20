@@ -1,19 +1,10 @@
 public class HROfficer {
 
+    //*creating devobj public variable which will have the properties of Developer class
     public Developer devObj;
-    
-    public void devObj (HROfficer Developer){
-    
 
-    }
-    public int gettotalProjects() {
-        return 0;
-    }
 
-    public int gettotalMonths() {
-        return 0;
-    }
-
+    //* creating a method for finding the nth power of a number
     public int power(int num,int power)
     {
         int pow =1;
@@ -23,6 +14,8 @@ public class HROfficer {
         return pow;
     }
 
+
+    //*creating a method for finding the length of an integer
     public int length(int num){
     
         int i;
@@ -31,25 +24,41 @@ public class HROfficer {
     }
     
 
-
+    //* The void method which will print out the Performance
     public void  checkPerformance(Developer devObj){
         
+
+        //*Calculating the final performance using devobj and getter methods
         int sumMerge = devObj.gettotalProjects() * devObj.gettotalMonths() +100 ;
 
+
+        //*Storing it into another variable as it will be used in a for loop
         int sumPrint=sumMerge;
 
+
+        //*  Converting the int into a string for calculting the length (alternative)
         //int length = String.valueOf(sumMerge).length();
+
+
+        //* using length method finding the length of the int
         int length = length(sumMerge);
         int i;
         int finalPerformance=0;
 
         for(i=0 ;i<length ;i++)
         {
+
+            //*using the built in method to calculate the power
             // finalPerformance+=Math.pow(sumMerge%10,3);
+
+
+            //*using the power method to find the power
             finalPerformance+=power(sumMerge%10,3);
             sumMerge/=10;
         }
 
+        
+        //*printing the result and creating the conditions
         System.out.println("Performance result is : " + sumPrint );
 
         if (finalPerformance%2 == 0 ){
