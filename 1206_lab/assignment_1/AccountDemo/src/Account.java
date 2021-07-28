@@ -22,6 +22,7 @@ public class Account {
             return balance-x;
         else if(this.transactionType.equals("credit"))
             return balance+x;
+        return x;
         
     }
 }
