@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 typedef struct Vector Vector; // typedef will replace "struct Vector" definitions
