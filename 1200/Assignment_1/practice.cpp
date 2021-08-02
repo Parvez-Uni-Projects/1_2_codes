@@ -23,6 +23,8 @@
  void student_credentials();
  void teacher_credentials();
 
+ void forgot_pass();
+
 //declaring global variables for keeping the track of student & teacher number
 int student_count=0;
 int teacher_count=0;
@@ -164,13 +166,14 @@ void teacher_edit(){
 //creating a function to logout of the system
 void logout(){
     printf("Logout successful");
+    login_options();
 }
-//!creating a function to exit from the process
+//creating a function to exit from the process
 void exit(){
     printf("Exit successful");
 }
 
-//!creating a function to see the options of the student
+//creating a function to see the options of the student
 void student_options(int student_number){
 
     int student_options;
@@ -192,7 +195,7 @@ void student_options(int student_number){
         break;
     }
 }
-//!creating a function to see the options for teacher
+//creating a function to see the options for teacher
 void teacher_options(){
 
     int teacher_options;
@@ -228,7 +231,7 @@ void teacher_options(){
     }
 }
 
-//! creating a function to take the student credential and check them
+//creating a function to take the student credential and check them
 void student_credentials (){
 
     char student_email[50] ,student_pass[50];
@@ -244,10 +247,13 @@ void student_credentials (){
     scanf("%s",&student_pass);
     fflush(stdin);
 
+    int pass_comp=0;
+    int email_comp=0;
+
     for (int i=0 ;i <=student_count ;i ++)
         {
-            int email_comp = strcmp(student[i].s_email ,student_email);
-            int pass_comp  = strcmp(student[i].s_pass ,student_pass);
+            email_comp = strcmp(student[i].s_email ,student_email);
+            pass_comp  = strcmp(student[i].s_pass ,student_pass);
         
             if (  (email_comp==0) && (pass_comp==0)  )
             {
@@ -256,6 +262,66 @@ void student_credentials (){
                 break;
             } 
         }
+
+        if (  (email_comp != 0) && (pass_comp != 0)  )
+        {
+            printf("Email and password didn't match\n1. Try again\n2. Exit\n3.Forgot Password");
+
+            printf("\nEnter your choice\n");
+            int choice;
+            scanf("%d",&choice);
+            if (choice == 1)
+            login_options();
+            else if (choice == 2 )
+                exit();
+            else if (choice == 3)
+                forgot_pass();
+            
+        }
+}
+
+void forgot_pass(){
+
+    int id;
+    printf(" Enter your ID : ");
+    scanf("%d",&id);
+
+    printf("Who are you \n1. Student \n2.Teacher \n");
+    int choice;
+    printf("Enter your choice : ");
+    scanf("%d",&choice);
+
+    if ((student_count >= 1 ) || (teacher_count >= 1))
+
+    {
+        if (choice == 1 ){
+        for (int i =0 ; i <student_count ; i++)
+        {
+            if (id == student[i].s_id);
+            {
+                printf("Your password is : %s",student[i].s_pass);
+                printf("Your email    is : %s",student[i].s_email);
+
+            }      
+        }
+        }
+
+    else if (choice == 2){
+        for (int i =0 ; i <teacher_count ; i++)
+        {
+            if (id == teacher[i].t_id);
+            {
+                printf("Your password is : %s",teacher[i].t_pass);
+                printf("Your email    is : %s",teacher[i].t_email);
+
+            }      
+        }
+        }
+    }
+    else 
+        printf("\nNot sufficient student  or teacher");
+
+    
 }
 
 //creating a function to take the teacher credential and check them
