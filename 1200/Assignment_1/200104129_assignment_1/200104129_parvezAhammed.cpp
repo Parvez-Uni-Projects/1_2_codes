@@ -74,7 +74,7 @@ void get_student_info(int student_number){
         fflush(stdin);
 
         int id = 128; //initializing the id at 128 as the groups first roll
-        student[i].s_id =id++;
+        student[i].s_id =id+student_count;
         student_count++;
     }
 }
