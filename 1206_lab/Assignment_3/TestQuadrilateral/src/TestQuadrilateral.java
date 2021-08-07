@@ -7,17 +7,8 @@ public class TestQuadrilateral {
 
 
 
-        for (int i = 1 ; i <= 3 ; i ++)
-            {
-                System.out.println("Input " + i + " value :");
-            }
+        CreateQuadrilateral quad = new  CreateQuadrilateral();
 
-
-       
-        // System.out.println("Input "); 
-        // int totalProjects=scanner.nextInt();
-        // System.out.println("Total Months: ");
-        // int totalMonths=scanner.nextInt();
 
 
         System.out.println("Hello, World!");

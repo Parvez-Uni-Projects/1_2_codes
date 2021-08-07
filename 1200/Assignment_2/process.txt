@@ -1,0 +1,6 @@
+1.open the file in read mode and scan all the properties
+2.store the data in structure and also in the global arrays 
+3.Print the stored data
+4.Delete the duplicate elements in array
+5.Sort the elements of array in decreasing way
+6.Compare the array with the structure details to

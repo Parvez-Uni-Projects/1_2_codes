@@ -2,6 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+float total_gpa_arr[20];
+float hsc_gpa_arr[20];
+float ssc_gpa_arr[20];
+
+int unique_total_gpa;
+int unique_hsc_gpa;
+int unique_ssc_gpa;
+
 struct details {
     int id ;
     char name [10];
@@ -24,6 +32,29 @@ void file_scanner(int range)
 
     FILE *sf = fopen ("student_data.txt", "r");
 
+
+    //  if (i % 5 == 0)
+        //     fscanf(sf, "%s %d", &string[i].id,&details[i].id);
+
+        //  else if (i % 5 == 1)
+        //     fscanf(sf, "%s %s", &string[i].name,&details[i].name);
+
+        //  else if (i % 5 == 2)
+        //  {
+        //      fscanf(sf, "%s %f", &string[i].total_gpa,&details[i].total_gpa);
+        //                 total_gpa_arr[i] = details[i].total_gpa;
+        //  }
+        //  else if (i % 5 ==  3)
+        //  {
+        //      fscanf(sf, "%s %f", &string[i].hsc_gpa,&details[i].hsc_gpa);
+        //                 hsc_gpa_arr[i] = details[i].hsc_gpa;
+        //  }
+        //  else if (i % 5 ==  4)
+        //  {
+        //      fscanf(sf, "%s %f", &string[i].ssc_gpa,&details[i].ssc_gpa);
+        //                 ssc_gpa_arr[i] = details[i].ssc_gpa;
+        //  }
+
      for (int i = 0; i < range ; i++){
 
             for(int j = 0 ; j <5 ; j ++ )
@@ -40,14 +71,17 @@ void file_scanner(int range)
                     
                     case 2:
                     fscanf(sf, "%s %f", &string[i].total_gpa,&details[i].total_gpa);
+                        total_gpa_arr[i] = details[i].total_gpa;
                          break;
                     
                     case 3:
                     fscanf(sf, "%s %f", &string[i].hsc_gpa,&details[i].hsc_gpa);
+                        hsc_gpa_arr[i] = details[i].hsc_gpa;
                          break;
                     
                     case 4:
                     fscanf(sf, "%s %f", &string[i].ssc_gpa,&details[i].ssc_gpa);
+                        ssc_gpa_arr[i] = details[i].ssc_gpa;
                          break;
                     default:
                          break;
@@ -168,11 +202,97 @@ void hsc_gpa_analyzer(int range){
             }
     }
 }
+void delete_duplicate_element(int range) 
+{
+
+    int range0= range;
+    int range1 = range;
+    int range2 = range;
+    
+    for(int i=0; i<range0; i++)
+    {
+        for(int j=i+1; j<range0; j++)
+        {
+            
+            if(total_gpa_arr[i] == total_gpa_arr[j])
+            {
+               
+                for(int k=j; k < range0 - 1; k++)
+                {
+                    total_gpa_arr[k] = total_gpa_arr[k + 1];
+                }
+                range0--;  
+                j--;
+            }
+        }
+    }
+    
+
+    for(int i=0; i<range1; i++)
+    {
+        for(int j=i+1; j<range1; j++)
+        {
+            
+            if(hsc_gpa_arr[i] == hsc_gpa_arr[j])
+            {
+               
+                for(int k=j; k < range1 - 1; k++)
+                {
+                    hsc_gpa_arr[k] = hsc_gpa_arr[k + 1];
+                }
+                range1--;  
+                j--;
+            }
+        }
+    }
+
+    for(int i=0; i<range2; i++)
+    {
+        for(int j=i+1; j<range2; j++)
+        {
+            
+            if(ssc_gpa_arr[i] == ssc_gpa_arr[j])
+            {
+               
+                for(int k=j; k < range2 - 1; k++)
+                {
+                    ssc_gpa_arr[k] = ssc_gpa_arr[k + 1];
+                }
+                range2--;  
+                j--;
+            }
+        }
+    }
+    unique_total_gpa = range0;
+    unique_hsc_gpa   = range1;
+    unique_ssc_gpa   = range2;
+
+
+    printf("\nArray elements after deleting duplicates : \n");
+    for(int i=0; i<range0; i++)
+    {
+        printf("Total =%.2f\t", total_gpa_arr[i]);  
+    }
+    printf("\n\n");
+    for(int i=0; i<range1; i++)
+    {
+        
+        printf("HSC   =%.2f\t", hsc_gpa_arr[i]);
+       
+    }
+    printf("\n\n");
+    for(int i=0; i<range2; i++)
+    {
+        printf("SSC   =%.2f\t",ssc_gpa_arr[i]);
+    }
+     
+
+}
 
 int main ()
 {
 
-    int number_of_students = 7 ;
+    int number_of_students = 5 ;
     FILE *sf = fopen ("student_data.txt", "r");
 
     if (sf == NULL){
@@ -182,10 +302,25 @@ int main ()
         file_scanner (number_of_students);
         fclose(sf);
     }
-    printf(" \n\n");
+    // printf(" \n\n");
     //file_data_printer(number_of_students);
     //total_gpa_analyzer(number_of_students);
     //ssc_gpa_analyzer(number_of_students);
-    hsc_gpa_analyzer(number_of_students);
+    //hsc_gpa_analyzer(number_of_students);
 
+    // for (int i = 0 ; i < number_of_students ; i++)
+    // {
+        
+    //     printf("Total  = %.2f\n",total_gpa_arr[i]);
+    //     // printf("HSC   gpa = %.2f\n",hsc_gpa_arr[i]);
+    //     // printf("SSC   gpa = %.2f\n\n",ssc_gpa_arr[i]);
+    // }
+
+    delete_duplicate_element(number_of_students);
+
+    printf("\n\nUTG = %d UHG = %d USG = %d",unique_total_gpa,unique_hsc_gpa,unique_ssc_gpa);
+
+
+    
+return 0;
 }
