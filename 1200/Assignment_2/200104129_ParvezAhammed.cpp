@@ -289,7 +289,7 @@ int main ()
         file_scanner ();
         fclose(student_file);
     }
-    file_data_printer();
+    file_data_printer(); 
     delete_duplicate_element();
     sort_decreasing_order();
     total_gpa_analyzer();

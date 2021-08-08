@@ -229,12 +229,14 @@ float *sort_decreasing_order(float *array,int option)
 
 int main ()
 { 
-    FILE *student_file = fopen ("student_data.txt", "r");
+    FILE *student_file = fopen ("student_data.txt", "r"); // opening the file in reading mode to scan the data's from the file 
 
+
+    //checking if the pointer contains anything if it does scanning will be done 
     if (student_file == NULL){
         printf("File not found \n");
     } else {
-        file_scanner ();
+        file_scanner (); // scaning the 
         fclose(student_file);
     }
     file_data_printer();
