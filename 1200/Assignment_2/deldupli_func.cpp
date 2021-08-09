@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 
 #define MAX_SIZE 100
@@ -45,8 +43,7 @@ float *delete_duplicate_element( float *arr ,int option )
     default:
         break;
     }
-
-   
+ 
   return arr;
     
 }

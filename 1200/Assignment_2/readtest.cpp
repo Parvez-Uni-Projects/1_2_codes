@@ -324,3 +324,12 @@ int main ()
     
 return 0;
 }
+
+  // fscanf(sf, "%s %d", &string[i].id,&details[i].id);  
+                    // fscanf(sf, "%s %s", &string[i].name,&details[i].name);   
+                    // fscanf(sf, "%s %f", &string[i].total_gpa,&details[i].total_gpa);
+                    //     total_gpa_arr[i] = details[i].total_gpa;
+                    // fscanf(sf, "%s %f", &string[i].hsc_gpa,&details[i].hsc_gpa);
+                    //     hsc_gpa_arr[i] = details[i].hsc_gpa;   
+                    // fscanf(sf, "%s %f", &string[i].ssc_gpa,&details[i].ssc_gpa);
+                    //     ssc_gpa_arr[i] = details[i].ssc_gpa;

@@ -1,6 +1,12 @@
 public class CreateQuadrilateral {
     
 
+    public Quadrilateral quadObj;
+
+    CreateQuadrilateral(Quadrilateral quadObj){
+
+    }
+
     public Quadrilateral generateQuad( double side )
     {
         Quadrilateral square = new Quadrilateral();

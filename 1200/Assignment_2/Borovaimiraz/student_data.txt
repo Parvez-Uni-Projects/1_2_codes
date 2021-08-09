@@ -1,0 +1,87 @@
+id 1
+name abc
+total_gpa 9.55
+hsc 4.55
+ssc 5.0
+
+id 2
+name def
+total_gpa 9.55
+hsc 5.0
+ssc 4.55
+
+id 3
+name xyz
+total_gpa 9.60
+hsc 5.00
+ssc 4.60
+
+id 4
+name pqr 
+total_gpa 10
+hsc 5.0
+ssc 5.0
+
+id 5
+name ali 
+total_gpa 9.67
+hsc 4.67
+ssc 5.0
+
+
+
+Total GPA : 10.00
+================
+ID : 4   Name:pqr
+
+
+Total GPA : 9.67
+================
+ID : 5   Name:ali
+
+
+Total GPA : 9.60
+================
+ID : 3   Name:xyz
+
+
+Total GPA : 9.55
+================
+ID : 1   Name:abc
+ID : 2   Name:def
+
+
+SSC GPA : 5.00
+================
+ID : 1   Name:abc
+ID : 4   Name:pqr
+ID : 5   Name:ali
+
+
+SSC GPA : 4.60
+================
+ID : 3   Name:xyz
+
+
+SSC GPA : 4.55
+================
+ID : 2   Name:def
+
+
+HSC GPA : 5.00
+================
+ID : 2   Name:def
+ID : 3   Name:xyz
+ID : 4   Name:pqr
+
+
+HSC GPA : 4.67
+================
+ID : 5   Name:ali
+
+
+HSC GPA : 4.55
+================
+ID : 1   Name:abc
+
+

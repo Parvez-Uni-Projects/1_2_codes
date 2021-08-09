@@ -1,0 +1,14 @@
+HSC Gpa: 5.00
+===============
+ID: 2 Name: def
+ID: 3 Name: xyz
+ID: 4 Name: pqr
+
+HSC Gpa: 4.67
+===============
+ID: 5 Name: ali
+
+HSC Gpa: 4.55
+===============
+ID: 1 Name: abc
+

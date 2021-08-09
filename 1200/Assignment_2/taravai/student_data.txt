@@ -1,0 +1,29 @@
+id 1
+name abc
+total_gpa 9.55
+hsc 4.55
+ssc 5.0
+
+id 2
+name def
+total_gpa 9.55
+hsc 5.0
+ssc 4.55
+
+id 3
+name xyz
+total_gpa 9.60
+hsc 5.0
+ssc 4.60
+
+id 4
+name pqr
+total_gpa 10
+hsc 5.0
+ssc 5.0
+
+id 5
+name ali
+total_gpa 9.67
+hsc 4.67
+ssc 5.0
