@@ -27,6 +27,8 @@ public class Product {
         this.productWeight = productWeight;
     }
 
+
+
     public Product checkAndGenerate(int NewproductID, double newProductWeight){
 
         Product p = new Product();
@@ -70,7 +72,7 @@ public class Product {
 
     }
 
-    public Product checkAndgenerate(int productID1, int productID2)
+    public Product checkAndGenerate(int productID1, int productID2)
     {
         Product p = new Product();
 
@@ -88,7 +90,7 @@ public class Product {
         return p;
     }
 
-    public Product checkAndgenerate(double productWeight1, double productWeight2)
+    public Product checkAndGenerate(double productWeight1, double productWeight2)
     {
         Product p = new Product();
 
