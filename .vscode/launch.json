@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Factory",
+            "request": "launch",
+            "mainClass": "Factory",
+            "projectName": "1_2_codes_9a436830"
+        },
+        {
+            "type": "java",
             "name": "Launch TestQuadrilateral",
             "request": "launch",
             "mainClass": "TestQuadrilateral",
