@@ -1,0 +1,33 @@
+public class FoodDemo {
+    public static void main(String[] args) throws Exception {
+        HealthyFood lv1 = new Milk("Is high on calories");
+        Milk b = new Milk("Milk",,10);
+
+        System.out.println("Food is "+b.getName());
+        System.out.println("Calorie per 100 gm "+b.getCalories());
+        System.out.println("Fat per 100 gm "+b.getFat());
+        System.out.println("Health benefits are "+lv1.getNutritionValue());
+        System.out.println("Calcium content is "+b.getFat());
+
+        JunkFood c = new Pizza()
+        System.out.println("Food is "+b.getName());
+        System.out.println("Calorie per 100 gm "+b.getCalories());
+        System.out.println("Fat per 100 gm "+b.getFat());
+        System.out.println("Health benefits are "+lv1.getNutritionValue());
+        System.out.println("Calcium content is "+b.getFat());
+
+
+        System.out.println("Food is "+b.getName());
+        System.out.println("Calorie per 100 gm "+b.getCalories());
+        System.out.println("Fat per 100 gm "+b.getFat());
+        System.out.println("Health benefits are "+lv1.getNutritionValue());
+        System.out.println("Calcium content is "+b.getFat());
+        
+        
+
+
+       
+
+
+    }
+}

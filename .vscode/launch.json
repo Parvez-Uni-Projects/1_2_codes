@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FoodDemo",
+            "request": "launch",
+            "mainClass": "FoodDemo",
+            "projectName": "1_2_codes_9a436830"
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoVehicle",
+            "request": "launch",
+            "mainClass": "DemoVehicle",
+            "projectName": "1_2_codes_9a436830"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "1_2_codes_9a436830"
+        },
+        {
+            "type": "java",
             "name": "Launch Factory",
             "request": "launch",
             "mainClass": "Factory",

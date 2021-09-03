@@ -1,11 +1,11 @@
 {
     "java.project.sourcePaths": [
+        "1206_lab/lab online/demovehicle",
         "1206_lab/javalab/CreateTulip/src",
+        "1206_lab/Mid_exam/src",
         "1206_lab/Assignment_3/TestQuadrilateral/src",
-        "1206_lab/Assignment 2/TestEmployee/src",
-        "1206_lab/Assignment 2/CostEstimation/src",
-        "1206_lab/Assignment 2/BatsmanSelection/src",
-        "1206_lab/Assignment_3/Factory/src"
+        "1206_lab/Assignment_3/Factory/src",
+        "1206_lab/lab online/FoodDemo/src"
     ],
     "cSpell.words": [
         "Cgpa",
