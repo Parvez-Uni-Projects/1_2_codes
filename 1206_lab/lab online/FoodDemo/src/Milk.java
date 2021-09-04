@@ -5,8 +5,8 @@ public class Milk implements HealthyFood{
     public double milkFat;
     public String milkNutritionValue;
 
-    public String Calcium (){
-        System.out.println("Calcium content is 12%");
+    public String calcium (){
+        return "Calcium content is 12%";
     }
 
     public Milk(String milkName ,double milkCalorie , double milkFat){
@@ -30,12 +30,12 @@ public class Milk implements HealthyFood{
      }
 
      @Override
-     public String getCalories(){
+     public double getCalories(){
          return milkCalorie;
      }
 
      @Override
-     public String setCalories(double milkCalorie){
+     public void setCalories(double milkCalorie){
          this.milkCalorie = milkCalorie;
      }
 
@@ -49,13 +49,13 @@ public class Milk implements HealthyFood{
         this.milkFat = milkFat;
     }
     @Override
-    String getNutritionValue(){
-        return milkHealthIssue;
+    public String getNutritionValue(){
+        return milkNutritionValue;
     }
 
 
     @Override
-    String setNutritionValue(String milkNutritionValue){
+    public void setNutritionValue(String milkNutritionValue){
         this.milkNutritionValue = milkNutritionValue;
     }
     

@@ -1,5 +1,5 @@
 public interface WeakTeam extends Team {
     public int getReplacementPlayer();
-    public void setReplacementPlayer();
+    public void setReplacementPlayer(int replacementPlayer);
     
 }

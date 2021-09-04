@@ -3,15 +3,12 @@
 char str[100], str2[100];
 int len;
 int mode;
-typedef struct UserDetails det;
 int count=0;
 struct UserDetails{
 	int autoGenID;
 	char nam[100];
 	double level;
-	int life;
-	double cgpa;
-};
+}details[20];
 
 void drawTextBox()
 {

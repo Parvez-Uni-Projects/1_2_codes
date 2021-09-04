@@ -7,27 +7,19 @@ public class Salad extends DietFood implements HealthyFood {
 
         public Salad(String saladName ,double saladCalorie , double saladFat){
            
-            super(saladName,saladCalorie,saladFat);
+            this.saladName = saladName;
+            this.saladCalorie = saladCalorie;
+            this.saladFat = saladFat;
         }
 
         public Salad(){
-            super();
+            
         }
 
-    public void cholesterol (){
+        public void cholesterol (){
         System.out.println("Salads Have 0% Cholesterol ");
-    }
-
-
-        
-    
-        public calcium (){
-            System.out.println("Calcium content is 12%");
         }
 
-    
-       
-    
         public Salad (String saladNutritionValue){
             this.saladNutritionValue = saladNutritionValue;
         }
@@ -43,12 +35,12 @@ public class Salad extends DietFood implements HealthyFood {
          }
     
          @Override
-         public String getCalories(){
+         public double getCalories(){
              return saladCalorie;
          }
     
          @Override
-         public String setCalories(double saladCalorie){
+         public void setCalories(double saladCalorie){
              this.saladCalorie = saladCalorie;
          }
     
@@ -62,17 +54,14 @@ public class Salad extends DietFood implements HealthyFood {
             this.saladFat = saladFat;
         }
         @Override
-        String getNutritionValue(){
-            return saladHealthIssue;
+        public String getNutritionValue(){
+            return saladNutritionValue;
         }
     
     
         @Override
-        void setNutritionValue(String saladNutritionValue){
+        public void setNutritionValue(String saladNutritionValue){
             this.saladNutritionValue = saladNutritionValue;
         }
         
-    
-    
-    
 }

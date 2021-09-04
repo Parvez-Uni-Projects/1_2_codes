@@ -1,13 +1,13 @@
 public interface Food {
 
     public String getName();
-    public void setName();
+    public void setName(String name);
 
-    public String getCalories();
-    public void setCalories();
+    public double getCalories();
+    public void setCalories(double calories);
 
     public double getFat();
-    public void setFat();
+    public void setFat(double fat);
 
     
 }

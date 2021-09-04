@@ -1,7 +1,7 @@
 public interface JunkFood extends Food {
 
-    String getHealthIssues();
-    void setHealthIssues(String healthIssues);
+    public String getHealthIssues();
+    public void setHealthIssues(String healthIssues);
 
     
 }

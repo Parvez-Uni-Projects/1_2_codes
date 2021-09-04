@@ -5,9 +5,10 @@ public class Pizza implements JunkFood {
     public double pizzaFat;
     public String pizzaHealthIssue;
 
-    String Problems()
+    public String problems()
     {
-        System.out.println("High on calories");
+        return "High on calories";
+        
     }
 
     public Pizza(String pizzaName ,double pizzaCalorie , double pizzaFat){
@@ -30,12 +31,12 @@ public class Pizza implements JunkFood {
      }
 
      @Override
-     public String getCalories(){
+     public double getCalories(){
          return pizzaCalorie;
      }
 
      @Override
-     public String setCalories(double pizzaCalorie){
+     public void setCalories(double pizzaCalorie){
          this.pizzaCalorie = pizzaCalorie;
      }
 
@@ -49,13 +50,13 @@ public class Pizza implements JunkFood {
         this.pizzaFat = pizzaFat;
     }
     @Override
-    String getHealthIssues(){
+    public String getHealthIssues(){
         return pizzaHealthIssue;
     }
 
 
     @Override
-    String setHealthIssues(String pizzaHealthIssue){
+    public void setHealthIssues(String pizzaHealthIssue){
         this.pizzaHealthIssue = pizzaHealthIssue;
     }
 

@@ -40,7 +40,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="assignment_3.cpp">
+    <ClCompile Include="mahis_code_file.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

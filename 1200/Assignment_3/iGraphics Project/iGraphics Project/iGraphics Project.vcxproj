@@ -71,7 +71,7 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="assignment_3.cpp" />
+    <ClCompile Include="mahis_code_file.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

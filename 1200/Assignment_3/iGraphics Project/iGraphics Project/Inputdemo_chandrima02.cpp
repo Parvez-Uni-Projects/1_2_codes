@@ -4,15 +4,12 @@ char str[100], str2[100];
 int len;
 int mode;
 typedef struct UserDetails det;
-//int count=0;
-int oldUser=3;
+
 struct UserDetails{
 	int autoGenID;
-	char nam[100];
-	double level;
-	int life;
-	double cgpa;
-};
+	char name[100];
+	
+}user[20];
 
 void drawTextBox()
 {
@@ -98,9 +95,9 @@ void iKeyboard(unsigned char key)
 			int id=1,count=0;
 			f1=fopen("Details001.txt","r");
 			int j=0;
-			while(fscanf(f1, "%s%lf%d%lf",&user[j].nam,&user[j].level,&user[j].life,&user[j].cgpa) != EOF){
+			while(fscanf(f1, "%s%lf%d%lf",&user[j].name) != EOF){
 				user[j].autoGenID=id+count;
-				fscanf(f1,"%s%lf%d%lf",&user[j].nam,&user[j].level,&user[j].life,&user[j].cgpa);
+				fscanf(f1,"%s%lf%d%lf",&user[j].name);
 				count++;
 				//printf("%d\n%s\n%lf\n%d\n%lf\n",user[j].autoGenID,user[j].nam,user[j].level,user[j].life,user[j].cgpa);
 				j++;
@@ -109,7 +106,7 @@ void iKeyboard(unsigned char key)
 			int k=100,t=0;
 			for(int l=0;l<25;l++){
 				
-				t=strcmp(user[l].nam,str2);
+				t=strcmp(user[l].name,str2);
 				//if(user[l].nam!= NULL)
 				//printf("user input= %s\nFile name=%s\n", str2,user[l].nam);
 					if(t==0){
@@ -120,31 +117,9 @@ void iKeyboard(unsigned char key)
 			
 			
 			if(k!=100){
-				printf("\nOLD USER\nID: %d\nName: %s\nLevel: %lf\nLife: %d\nCgpa: %lf\n",user[k].autoGenID,user[k].nam,user[k].level,user[k].life,user[k].cgpa);
+				printf("\nOLD USER\nID: %d\nName: %s\nLevel: %lf\nLife: %d\nCgpa: %lf\n",user[k].autoGenID,user[k].name);
 			}
 	
-			
-			
-			else{
-					printf("NEW USER\n");
-
-				f1=fopen("Details001.txt","a");
-				fprintf(f1,"%s\n%lf\n%d\n%lf\n",str2,1.1,100,00);
-				oldUser++;
-				
-				fclose(f1);
-				int id=1,count=0;
-				f1=fopen("Details.txt","r");
-				j=0;
-				while(fscanf(f1, "%s%lf%d%lf",&user[j].nam,&user[j].level,&user[j].life,&user[j].cgpa) != EOF){
-				user[j].autoGenID=id+count;
-				fscanf(f1,"%s%lf%d%lf",&user[j].nam,&user[j].level,&user[j].life,&user[j].cgpa);
-				count++;
-				j++;}
-				fclose(f1);
-				
-			}
-
 			for(i = 0; i < len; i++)
 				str[i] = 0;
 			len = 0;
@@ -187,10 +162,7 @@ void iSpecialKeyboard(unsigned char key)
 int main()
 {
 	//place your own initialization codes here.
-
-	len = 0;
-	mode = 0;
-	str[0]= 0;
+	
 	iInitialize(400, 400, "TextInputDemo");
 	iStart();
 	return 0;
