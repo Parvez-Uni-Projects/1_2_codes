@@ -42,12 +42,20 @@ void iDraw()
     if(a == 1)
 	{
 		iShowImage(325, pic_rb_y, 100, 100, boom_image);
+		iShowImage(325, pic_rb_y, 100, 100, boom_image);
+		iShowImage(325, pic_rb_y, 100, 100, boom_image);
+		iShowImage(325, pic_rb_y, 100, 100, boom_image);
+		iShowImage(325, pic_rb_y, 100, 100, boom_image);
 		pic_rb_y = 520;
 	}
 
 	if(a == 2)
 	{
         
+		iShowImage(225, pic_gb_y, 100, 100, boom_image);
+		iShowImage(225, pic_gb_y, 100, 100, boom_image);
+		iShowImage(225, pic_gb_y, 100, 100, boom_image);
+		iShowImage(225, pic_gb_y, 100, 100, boom_image);
 		iShowImage(225, pic_gb_y, 100, 100, boom_image);
 
 		pic_gb_y = 520;
@@ -69,6 +77,7 @@ void iDraw()
                 }
 			iPauseTimer(0);
         }
+	
 	
 
    // iUnRotate();

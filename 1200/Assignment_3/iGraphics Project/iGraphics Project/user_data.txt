@@ -20,3 +20,9 @@ ID 10
 point 0
 ID 11 
 point 420
+ID 12 
+point 660
+ID 13 
+point 200
+ID 14 
+point 530
