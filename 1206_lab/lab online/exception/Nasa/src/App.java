@@ -6,16 +6,18 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Input a Code");
-        Integer code = scanner.nextInt();
-       
-        
+        Transceiver transceiver = new Transceiver();
 
-        Transceiver trans = new Transceiver();
-        trans.setCode(code);
+        Decoder decoder = new Decoder();
+
+        System.out.println("Input a Code");
+        int   code = scanner.nextInt();
+       
+        transceiver.setCode(code);
 
         try {
-            trans.checkSignal(code);
+            transceiver.checkSignal();
+            decoder.decodeSignal(transceiver.getCode());
             
         } catch (NoInformationFoundException e) {
             System.out.println(e);

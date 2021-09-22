@@ -3,14 +3,14 @@ import hotelexception.*;
 
 public class Booking {
    
-    void checkID (String ID , String  Category)
+    void checkID (String id , String  category) throws IDNumberInvalidException
     {
-        try {
-            if(Category.equals("passport") && ID.length() != 9  )
+        
+            if(category.equals("passport") && id.length() != 9  )
             {
                 throw new IDNumberInvalidException("Passport number is invalid");
             }
-            else if (Category.equals("nid" ) && ID.length() != 10 )
+            else if (category.equals("nid" ) && id.length() != 10 )
             {
                 throw new IDNumberInvalidException("NID is invalid");
             }
@@ -18,10 +18,6 @@ public class Booking {
             {
                 System.out.println("ID is valid");   
             }
-
-        } catch (IDNumberInvalidException e) {
-            System.out.println("Exception " + e);
-        }
     }
 
     void giveDiscount (int age , double roomRate)
@@ -29,12 +25,12 @@ public class Booking {
         try {
             if(age >= 60 || age <= 10)
         {
-            System.out.println("Giving 7.9 % Disocunt ");
-            System.out.println("Final room rate is " + (roomRate - (roomRate*.079)));
+            System.out.println("Giving 12.9 % Discount ");
+            System.out.println("Final room rate is " + (roomRate - (roomRate*.129)));
         }
         else 
         {
-            throw new NotApplicableForDiscountException("Age group is not included in disocunt offer");
+            throw new NotApplicableForDiscountException("Age group is not included in discount offer");
         }    
         } catch (NotApplicableForDiscountException e) {
             System.out.println("Exception is " + e);

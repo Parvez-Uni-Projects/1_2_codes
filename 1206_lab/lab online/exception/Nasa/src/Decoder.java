@@ -1,17 +1,17 @@
 public class Decoder {
     
-    void decodeSignal(int primeFactor)
+    void decodeSignal(int code )
     {
-        if (primeFactor == 2)
+        if (code % 2 == 0)
         {
             System.out.println("Water Found");
         }
 
-        else if (primeFactor == 3)
+        if (code % 3 == 0)
         {
             System.out.println("Microorganism Found");
         }
-        else if (primeFactor == 5)
+        if (code %5 == 0)
         {
             System.out.println("Minerals Found");
         }
