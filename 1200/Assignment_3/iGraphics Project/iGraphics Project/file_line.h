@@ -2,6 +2,7 @@
 using namespace std;
 
 #include <string.h>
+
 #define FILENAME "user_data.txt"
 #define FILENAME2 "high.txt"
 
@@ -10,7 +11,7 @@ int *sort_decreasing_order(int*);
 int point_array[20];
 int *point_array_modified;
 
-int file_line_counter(){  // counts the line of a file
+int file_line_counter(){  // counts the line of a file and at the end returns the total lines
 FILE *fp;
    char ch;
    int linesCount=0;
@@ -31,23 +32,25 @@ FILE *fp;
    return linesCount;
 
 }
-int total_attributes =2;  //here this is the number of attributes lik id and name here
+
+
+int total_attributes =2;  //here this is the number of attributes like id and name here
 int total_lines =file_line_counter() + 1;  //for here adding 1 to get the perfect amount of line else it skips one line
 int total_user = total_lines /total_attributes ;  // we can get user number by this formula
 
-struct user_details{
+struct user_details{   //declaring the structures for storing the details
    int id;
    int point;
 } details[20];
 
-struct user_string{
+struct user_string{ //declaring the structures for storing the attribute name
    char id[10];
    char point[10];
 } string_details[20];
 
 
 
-void file_scanner(){
+void file_scanner(){     //this function will scan all the lines from the file 
    FILE *fp = fopen (FILENAME,"r");
 
    if(fp==NULL)  printf("File \"%s\" does not exist!!!\n",FILENAME);
@@ -64,7 +67,7 @@ void file_scanner(){
 }
 
 
-int *sort_decreasing_order(int *array){
+int *sort_decreasing_order(int *array){    //will sort the incoming array in descending order anr return it
 
    int swap;
    int range = total_user;
@@ -82,8 +85,8 @@ int *sort_decreasing_order(int *array){
             }
         return array; 
 }
-
-int *delete_duplicate_element(int *array){
+ 
+int *delete_duplicate_element(int *array){  //will delete the duplicate element of an array 
    int range = total_user;
 
    for(int i=0; i<range; i++)
@@ -107,9 +110,7 @@ int *delete_duplicate_element(int *array){
 
 }
 
-void highest_score_printer(){
-
-  
+void highest_score_printer(){ //this function will print the highest score in a file 
 
    FILE *fp = fopen (FILENAME2,"w");
 

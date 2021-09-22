@@ -11,5 +11,6 @@
     "cSpell.words": [
         "Cgpa",
         "prin"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -4,24 +4,30 @@
 
 int dx, dy;
 
-int pic_rb_y =640;
-int pic_gb_y=640;
-int b;
+int frame_width = 640, frame_height= 520 ;
+
+int pic_red_ballon_y =frame_height;
+int pic_green_ballon_y=frame_height;
+
+int pic_green_ballon_x = 225;
+int pic_red_ballon_x= 325;
 
 
 void objectChange() {
 
 
-	if(pic_gb_y < -100){
-			pic_gb_y = 520;
+	if(pic_green_ballon_y < -100){
+			pic_green_ballon_y = 520;
 		}
 		else{
-			pic_gb_y -=2;
+			pic_green_ballon_y -=3;
 		}
-		if(pic_rb_y < -100){
-			pic_rb_y = 520;
+
+
+		if(pic_red_ballon_y < -100){
+			pic_red_ballon_y = 520;
 		}else{
-			pic_rb_y -=2;
+			pic_red_ballon_y -=5;
 		}
 	}
 	

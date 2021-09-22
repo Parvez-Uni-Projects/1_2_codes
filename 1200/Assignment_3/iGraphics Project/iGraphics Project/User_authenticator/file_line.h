@@ -2,6 +2,8 @@
 using namespace std;
 #define FILENAME "user_data.txt"
 
+
+
 int file_line_counter(){  // counts the line of a file
 FILE *fp;
    char ch;
@@ -23,6 +25,7 @@ FILE *fp;
    return linesCount;
 
 }
+
 int total_attributes =2;  //here this is the number of attributes lik id and name here
 int total_lines =file_line_counter()+1;  //for here adding 1 to get the perfect amount of line else it skips one line
 int total_user = total_lines / total_attributes;  // we can get user number by this formula

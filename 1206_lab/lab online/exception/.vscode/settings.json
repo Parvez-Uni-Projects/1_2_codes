@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "Nasa/src",
+        "Hotel/src",
+        "StremPlatform/src"
+    ]
+}

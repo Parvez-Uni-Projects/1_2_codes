@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 #include "file_line.h" //this header file counts the lines in a file and according to that creates some variables
 
 void file_scanner();
