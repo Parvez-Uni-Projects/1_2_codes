@@ -1,0 +1,124 @@
+import movieexception.*;
+public class Movie {
+    public static void main(String[] args) {
+
+        BookTicket bookTicket = new BookTicket();
+
+        //To show all exceptions are working perfectly passing different parameters each time in order to create the scenario
+        try {
+            bookTicket.checkAge(12, "M");
+        } catch (NotApplicableForChildrenException e) {
+            System.out.println("Exception is " +e);
+        }
+
+        try {
+            bookTicket.checkAge(12, "R");
+        } catch (NotApplicableForChildrenException e) {
+            System.out.println("Exception is  " +e);
+        }
+
+        try {
+            bookTicket.checkAge(12, "PG");
+        } catch (NotApplicableForChildrenException e) {
+            System.out.println("Exception is " +e);
+        }
+
+        try {
+            bookTicket.addCard("1111111111111111");
+        } catch (CardNotWorkingException e) {
+            System.out.println("Exception is " +e);   
+        }
+
+        try {
+            bookTicket.addCard("12345567911 111");
+        } catch (CardNotWorkingException e) {
+            System.out.println("Exception is " +e);   
+        }
+    }
+}
+
+
+
+
+
+
+import movieexception.*;
+
+public class Eligibility {
+
+    public void checkAge(int age , String rating) throws NotApplicableForChildrenException
+    {
+        
+        if(age < 18 && rating.equals("R")){
+            throw new NotApplicableForChildrenException("Not applicable for people under 18");
+        }
+        else if (age < 15 && rating.equals("M")){
+            throw new NotApplicableForChildrenException("Not applicable for kids under 15");
+        }
+        else if (age < 18 && (rating.equals("G") || rating.equals("PG") ) ){
+            System.out.println("Applicable for kids");
+        }
+
+
+
+    }
+    
+}
+
+
+
+import movieexception.*;
+
+public class BookTicket extends Eligibility {
+
+    public void addCard(String cardNo)
+    {
+        if (cardNo.length() < 16  || cardNo.contains(" "))
+        {
+            throw new CardNotWorkingException("Invalid card");
+        }
+        else 
+        {
+            System.out.println("Card Is valid");
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+package movieexception;
+
+public class NotApplicableForChildrenException extends Exception {
+
+
+    public NotApplicableForChildrenException (String message)
+    {
+        super(message);
+    }
+    
+
+
+}
+
+
+
+
+
+
+package movieexception;
+
+public class CardNotWorkingException extends RuntimeException{
+    
+
+    public CardNotWorkingException(String message)
+    {
+        super(message);
+    }
+    
+}
+

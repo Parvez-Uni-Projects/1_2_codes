@@ -1,0 +1,133 @@
+package validationexceptions;
+
+
+public class InvalidEmailException extends Exception{
+
+    public InvalidEmailException(String message) {
+        super(message);
+    }
+        
+    
+}
+
+package validationexceptions;
+
+
+public class NotAcceptableAgeException extends RuntimeException{
+
+    public NotAcceptableAgeException(String message) {
+        super(message);
+    }
+    
+    
+     
+}
+
+
+package validationexceptions;
+
+
+
+
+public class Enroll implements Validation {
+
+   
+    public void validateEmail(String email)
+    {
+        if(email.contains("@") && email.endsWith(".com"))
+        {
+            System.out.println("Valid");
+        }
+       else
+    {
+       throw new NotAcceptableAgeException("InvalidEmailException.");
+    }
+}
+
+public void validateAge (int age){
+    
+         if(age<18){
+             throw new NotAcceptableAgeException("Too young to enroll");
+         }
+         else if(age == 35){  
+           throw  new NotAcceptableAgeException("Too old to enroll");
+         }
+         else
+         {
+             System.out.println("Age is valid");
+         }
+    
+}
+    
+    
+}
+
+package validationexceptions;
+
+
+public class Student extends Enroll{
+    
+    
+   public void upload(String fileName){
+       
+       if(fileName.equals(".zip") && fileName.startsWith("180204")|| fileName.startsWith("180104")
+               || fileName.startsWith("170204"))
+       {
+           System.out.println("Valid File");
+       }
+       else 
+       {
+           throw new IllegalArgumentException();
+       }
+   }
+}
+
+
+package validationexceptions;
+
+
+public interface Validation {
+    
+    public void validateEmail(String email);
+    public void validateAge (int age);
+    
+}
+
+
+
+
+import validationexceptions.*;
+
+public class EnrolllingStudents {
+    public static void main(String[] args) {
+      
+        Student obj1 = new Student();
+        
+        Scanner sc = new Scanner(System.in);
+        String st1= sc.nextLine();
+        String filename = sc.nextLine();
+        
+        Scanner sc1 = new Scanner(System.in);
+        int age = sc1.nextInt();
+        try{
+            obj1.upload(filename);
+        }catch(IllegalArgumentException e){
+            
+            System.out.println(e);
+        }
+        
+        try{
+            obj1.validateEmail(st1);
+        }catch(NotAcceptableAgeException e)
+        {
+            System.out.println(e);
+        }
+        try{
+            obj1.validateAge(age);
+        }catch(NotAcceptableAgeException e)
+        {
+            obj1.validateAge(age);
+        } 
+    }
+}
+

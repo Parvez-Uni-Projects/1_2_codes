@@ -1,5 +1,0 @@
-contributor test
-
-testing after removing the credentials
-
-used git config right now and pushing
