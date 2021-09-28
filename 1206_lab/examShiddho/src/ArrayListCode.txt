@@ -1,0 +1,169 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+//        List l = new ArrayList();
+//        l.add(12);
+//        l.add(4.22);
+//        l.add("abcde");
+//
+//        for(Object o: l){
+//            System.out.println(o);
+//        }
+
+        // Type parameter <>, only accepts classtype
+        ArrayList<Integer> list = new ArrayList<>();
+//        list.add(3.55);     // can not add non integer values
+//        list.add("3.55");
+        int v = 50;
+        Integer ir = v;   // autoboxing
+
+        // element is added at the end of the list.
+        list.add(120);   // 120
+        list.add(v);     // 120, 50
+
+//        System.out.println(list.get(1));
+//        System.out.println(list.get(2)); // java.lang.IndexOutOfBoundsException
+
+        list.add(1, 100);   // 120, 100, 50
+        list.add(1, 500);   // 120, 500, 100, 50
+
+        list.set(2, 400);   // 120, 500, 400, 50
+        list.remove(0);     // 500, 400, 50
+
+//        for(int val: list){
+//            System.out.println(val);
+//        }
+
+        for(int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ArrayList Search
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+        try{
+            Scanner sc = new Scanner(new File("files/data.txt"));
+
+            while(sc.hasNext()){
+                int id = sc.nextInt();
+                String name = sc.next();
+                double cgpa = sc.nextDouble();
+
+                Student s = new Student(name, id, cgpa);
+                students.add(s);
+            }
+
+
+
+            Scanner sc1 = new Scanner(System.in);
+            String nameToFind = sc1.next();
+            int found = 0;
+
+            for(Student st: students){
+                if(nameToFind.equals(st.name)){
+                    System.out.println(st.name + " " + st.id + " " + st.cgpa);
+                    found = 1;
+                }
+            }
+
+            if(found == 0){
+                System.out.println("Name not found!");
+            }
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
+
+// ArrayList Sorting using Comparable interface
+
+
+class Student implements Comparable<Student> {
+    String name;
+    int id;
+    double cgpa;
+
+    Student(String name, int id, double cgpa){
+        this.name = name;
+        this.id = id;
+        this.cgpa = cgpa;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        String n1 = this.name;
+        String n2 = o.name;
+
+        return n2.compareTo(n1);
+
+        // returns negative: this object goes before o object
+        // returns positive: o object goes before this object
+        // returns 0: this object and o object are same.
+    }
+}
+
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+        try{
+            Scanner sc = new Scanner(new File("files/data.txt"));
+
+            while(sc.hasNext()){
+                int id = sc.nextInt();
+                String name = sc.next();
+                double cgpa = sc.nextDouble();
+
+                Student s = new Student(name, id, cgpa);
+                students.add(s);
+            }
+
+            Collections.sort(students);
+
+            for(Student st: students){
+                System.out.println(st.name + " " + st.id + " " + st.cgpa);
+            }
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
