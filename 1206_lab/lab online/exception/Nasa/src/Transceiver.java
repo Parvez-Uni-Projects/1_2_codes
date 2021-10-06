@@ -10,7 +10,7 @@ public class Transceiver extends Receiver{
 
          while(number%2==0)
             number/=2;
-        
+     
         while(number%3==0)
             number/=3;
         

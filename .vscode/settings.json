@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "AccountDemo/src",
         "1206_lab/lab online/demovehicle",
         "1206_lab/lab online/FoodDemo/src",
         "1206_lab/lab online/DemoTeam/src",
@@ -7,7 +8,7 @@
         "1206_lab/Mid_exam/src",
         "1206_lab/Assignment_3/TestQuadrilateral/src",
         "1206_lab/Assignment_3/Factory/src",
-        "AccountDemo/src"
+        "1206_lab/Lab final/nasa/src"
     ],
     "cSpell.words": [
         "Cgpa",
