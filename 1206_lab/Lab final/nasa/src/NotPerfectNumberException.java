@@ -1,4 +1,4 @@
-public class NotPerfectNumberException extends RuntimeException{
+public class NotPerfectNumberException extends Exception{
 
     public NotPerfectNumberException (String message)
     {

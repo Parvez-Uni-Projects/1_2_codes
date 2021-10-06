@@ -1,4 +1,3 @@
-import java.util.Set;
 
 public abstract class Machine implements Wave{
 

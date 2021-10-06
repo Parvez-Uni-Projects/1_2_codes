@@ -1,12 +1,10 @@
 public class Transceiver extends Machine {
 
-    @Override
-
     public void decodeWave() throws NotPerfectNumberException
     {
         
-        int i;
-        int sum;
+        int i ;
+        int sum = 0 ;
 
         for ( i =1 ; i <= getValue()/2 ; i++)
         {
@@ -25,7 +23,7 @@ public class Transceiver extends Machine {
         }
         else 
         {
-            throw new NotPerfectNumberException("perfect Number");
+            throw new NotPerfectNumberException("Not perfect Number");
         }
 
     }
