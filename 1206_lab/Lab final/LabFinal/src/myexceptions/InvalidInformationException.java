@@ -13,6 +13,4 @@ public class InvalidInformationException extends Exception{
         super(message);
     }
 
-
-    
 }

@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import myexceptions.*;
 public class App {
-
     
     public static void main(String[] args) throws Exception {
         //System.out.println("Hello, World!");
@@ -10,6 +9,8 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a Code");
         int   code = scanner.nextInt();
+        
+        code = 20;
 
         Transceiver transobj =  new Transceiver();
 

@@ -9,7 +9,6 @@ public class Transceiver extends ControlCenter {
         boolean flag = false;
 
         for (i = 2; i <= getCode() / 2; ++i) {
-            // condition for non-prime
             if (getCode() % i == 0) {
               flag = true;
               break;
@@ -27,8 +26,6 @@ public class Transceiver extends ControlCenter {
             Translator translator = new Translator();
             translator.decodeSignal(getCode());
         }
-         
-
     }
     
 }
